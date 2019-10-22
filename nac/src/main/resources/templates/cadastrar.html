@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Conta corrente</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+    <style>
+        .container-box-form{
+            position: absolute;
+            width: 400px;
+            height: 460px;
+            margin-left: 50%;
+            left: -200px;
+            margin-top: -230px;
+            top: 50%;
+        }
+        .form-box{
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            padding: 15px;
+            box-shadow: 0px 5px 30px -25px #000;
+            border-radius: 6px;
+        }
+        .align-center{
+            text-align: center;
+        }
+    </style>
+    <div class="container">
+        <div class="container-box-form">
+            <div class="title-page align-content-center">
+                <h1>Cadastrar CC</h1>
+            </div>
+            <div class="form-box">
+                <form action="/conta/cadastrar" method="POST">
+                    <div class="form-group" >
+                        <label for="titular">Titular</label>
+                        <input type="text" name="titular" width="200px" id="titular" class="form-control" placeholder="Digite o nome do titular">
+                    </div>
+                    <div class="form-group">
+                        <label for="agencia">Agência</label>
+                        <input type="number" name="agencia" width="200px" id="agencia" class="form-control" placeholder="Digite o nome do titular">
+                    </div>
+                    <div class="form-group">
+                        <label for="conta">Conta</label>
+                        <input type="number" name="conta" width="200px" id="conta" class="form-control" placeholder="Digite o nome do titular">
+                    </div>
+                    <div class="form-group">
+                        <label for="saldo">Saldo</label>
+                        <input type="text" name="saldo" width="200px" id="saldo" class="form-control" placeholder="Digite o nome do titular">
+                    </div>
+                    <div class="align-center">
+                        <button class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
